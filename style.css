@@ -58,7 +58,7 @@ body {
 }
 
 .main-contents {
-    background: yellow;
+    background: green;
 }
 
 .sidebar {
@@ -69,7 +69,8 @@ body {
 }
 
 .sidebar > div,
-.header > div {
+.header > div,
+.main-contents > div {
     border: 2px dashed white;
     border-radius: 10px;
 }
@@ -84,4 +85,16 @@ body {
 
 .header .search {
   grid-column: 1 / -1;
+}
+
+.main-contents {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+
+.main-contents .projects {
+  grid-area: 1 / 1 / -1 / 2;
 }
