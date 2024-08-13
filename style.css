@@ -46,6 +46,7 @@ body {
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 150px 1fr;
     height: 100vh;
+    color: white;
 }
 
 .sidebar {
@@ -61,14 +62,26 @@ body {
     background: green;
 }
 
+.icon {
+  background: white;
+}
+
 .sidebar {
     display: grid;
     grid-template-rows: 40px 2fr 1fr 2fr;
+    grid-template-columns: 40px 1fr;
     padding: 10px;
-    gap: 30px;
+    row-gap: 30px;
 }
 
-.sidebar > div,
+.sidebar > *,
+.sidebar > ul > li {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+  padding: 0;
+}
+
 .header > div,
 .main-contents > div {
     border: 2px dashed white;
