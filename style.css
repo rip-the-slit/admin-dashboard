@@ -80,6 +80,8 @@ body {
   display: grid;
   grid-template-columns: subgrid;
   padding: 0;
+  list-style: none;
+  gap: 5px;
 }
 
 .header > div,
@@ -97,7 +99,48 @@ body {
 }
 
 .header .search {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
   grid-column: 1 / -1;
+}
+
+.header .searchbar {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 5px;
+}
+
+.header .searchbar input {
+  height: 70%;
+  border-radius: 15px;
+  border: 1px solid black;
+  align-self: center;
+}
+
+.header .profile {
+  grid-column: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr max-content;
+  gap: 5px;
+}
+
+.header .user-info {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 5px;
+}
+
+.header .buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+}
+
+.header .buttons button {
+  height: 60%;
+  width: 80%;
+  border: 1px solid black;
+  border-radius: 30px;
 }
 
 .main-contents {
