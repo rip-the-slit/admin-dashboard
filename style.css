@@ -84,11 +84,12 @@ body {
   gap: 5px;
 }
 
-.header > div,
-.main-contents > div {
+/* .main-contents > div {
     border: 2px dashed white;
     border-radius: 10px;
-}
+} 
+*/
+
 
 .header {
   padding: 10px;
@@ -146,11 +147,90 @@ body {
 .main-contents {
   padding: 10px;
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 10px;
+  gap: 20px;
 }
 
 .main-contents .projects {
   grid-area: 1 / 1 / -1 / 2;
+}
+
+.main-contents > * {
+  display: grid;
+  grid-template-rows: max-content 1fr;
+}
+
+.main-contents .cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: 150px;
+  grid-auto-rows: 150px;
+  gap: 20px;
+}
+
+.cards-container .card {
+  display: grid;
+  grid-template-columns: 10px 1fr;
+  background: white;
+  border-radius: 5px;
+  color:black
+}
+
+.cards-container .card .card-decoration {
+  background: orange;
+  border-radius: 5px 0 0 5px;
+}
+
+.cards-container .card .card-content {
+  padding: 10px;
+  display: grid;
+  grid-template-rows: max-content 1fr 30px;
+}
+
+.cards-container .card .card-content .card-buttons {
+  display: grid;
+  grid-template-columns: 4fr repeat(3, 1fr);
+  gap: 5px;
+}
+
+.card-buttons :first-child {
+  grid-column: 2;
+}
+
+.announcements .card,
+.trending .card {
+  background: white;
+  color: black;
+  border-radius: 5px;
+  padding: 20px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.announcements .card > :nth-last-child(1n + 2) {
+  border-bottom: 1px solid grey;
+  padding-bottom: 5px;
+}
+
+.trending .card {
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 40px 1fr;
+  list-style: none;
+  gap: 10px;
+}
+
+.trending .card li {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+}
+
+.trending .card .icon {
+  background: black;
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+  align-self: center;
 }
