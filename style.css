@@ -114,6 +114,9 @@
 }
 
 body {
+    --slate-color: #e2e8f0;
+    --purple-color: #d946ef;
+    --darker-purple-color: #a21caf;
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 150px 1fr;
@@ -123,13 +126,15 @@ body {
 
 .sidebar {
     grid-area: 1 / 1 / -1 / 2;
-    background: blue;
+    background: var(--purple-color);
 }
 
 .header {
+
 }
 
 .main-contents {
+  background: var(--slate-color);
 }
 
 .icon {
@@ -185,7 +190,8 @@ body {
 .header .searchbar input {
   height: 70%;
   border-radius: 15px;
-  border: 1px solid black;
+  border: 0;
+  background: var(--slate-color);
   align-self: center;
 }
 
@@ -211,7 +217,8 @@ body {
 .header .buttons button {
   height: 60%;
   width: 80%;
-  border: 1px solid black;
+  border: 0;
+  background: var(--purple-color);
   border-radius: 30px;
 }
 
@@ -249,7 +256,7 @@ body {
 }
 
 .cards-container .card .card-decoration {
-  background: orange;
+  background: var(--darker-purple-color);
   border-radius: 5px 0 0 5px;
 }
 
