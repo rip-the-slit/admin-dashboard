@@ -260,6 +260,14 @@ body {
   color: #64748b;
 }
 
+.main-contents .projects p {
+  font-size: 15px;
+}
+
+.main-contents .announcements p {
+  font-size: 13px;
+}
+
 .main-contents .projects {
   grid-area: 1 / 1 / -1 / 2;
 }
