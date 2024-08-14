@@ -199,8 +199,9 @@ body {
 
 .header .searchbar {
   display: grid;
-  grid-template-columns: 40px 1fr;
-  gap: 5px;
+  grid-template-columns: max-content 1fr;
+  gap: 10px;
+  align-items: center;
 }
 
 .header .searchbar .icon svg{
@@ -219,7 +220,8 @@ body {
   grid-column: 3;
   display: grid;
   grid-template-columns: 1fr 1fr max-content;
-  gap: 5px;
+  gap: 10px;
+  align-items: center;
 }
 
 .header .profile .icon.notifications svg{
@@ -230,7 +232,8 @@ body {
 .header .user-info {
   display: grid;
   grid-template-columns: 1fr 5fr;
-  gap: 5px;
+  gap: 20px;
+  place-content: center;
 }
 
 .header .buttons {
@@ -353,10 +356,19 @@ body {
   grid-template-columns: subgrid;
 }
 
-.trending .card .icon {
-  background: black;
+.trending .card .icon,
+.header .icon.usericon {
+  background: #7c3aed;
   border-radius: 100%;
   height: 40px;
   width: 40px;
   align-self: center;
+  fill: white;
+  padding: 6px;
+}
+
+.user-info .icon.usericon {
+  height: 70px;
+  width: 70px;
+  padding: 15px;
 }
