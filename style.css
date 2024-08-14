@@ -127,29 +127,33 @@ body {
 .sidebar {
     grid-area: 1 / 1 / -1 / 2;
     background: var(--purple-color);
-}
-
-.header {
-
+    color: white;
+    fill: white;
 }
 
 .main-contents {
   background: var(--slate-color);
 }
 
-.icon {
+/* .icon {
   background: white;
   border: 1px solid black;
-}
+  display: grid;
+  place-content: center;
+} */
 
 .sidebar {
     display: grid;
-    grid-template-rows: 40px 2fr 1fr 2fr;
+    grid-template-rows: repeat(3, max-content) 1fr;
     grid-template-columns: 40px 1fr;
-    padding: 10px;
+    padding: 15px;
     row-gap: 30px;
+    font-size: 15px;
 }
 
+.sidebar svg {
+  height: 20px;
+}
 .sidebar > *,
 .sidebar > ul > li {
   grid-column: 1 / -1;
@@ -157,7 +161,19 @@ body {
   grid-template-columns: subgrid;
   padding: 0;
   list-style: none;
-  gap: 5px;
+  gap: 10px;
+}
+
+.sidebar span {
+  align-self: center;
+}
+
+.sidebar .logo {
+  font-size: 17px;
+}
+
+.sidebar .logo svg {
+  height: 30px;
 }
 
 /* .main-contents > div {
@@ -187,6 +203,10 @@ body {
   gap: 5px;
 }
 
+.header .searchbar .icon svg{
+  width: 25px;
+}
+
 .header .searchbar input {
   height: 70%;
   border-radius: 15px;
@@ -200,6 +220,11 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr max-content;
   gap: 5px;
+}
+
+.header .profile .icon.notifications svg{
+  width: 25px;
+  fill: black;
 }
 
 .header .user-info {
@@ -220,6 +245,7 @@ body {
   border: 0;
   background: var(--purple-color);
   border-radius: 30px;
+  color: white;
 }
 
 .main-contents {
@@ -228,6 +254,10 @@ body {
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 20px;
+}
+
+.main-contents p {
+  color: #64748b;
 }
 
 .main-contents .projects {
@@ -263,13 +293,23 @@ body {
 .cards-container .card .card-content {
   padding: 10px;
   display: grid;
-  grid-template-rows: max-content 1fr 30px;
+  grid-template-rows: max-content 1fr max-content;
 }
 
 .cards-container .card .card-content .card-buttons {
   display: grid;
   grid-template-columns: 4fr repeat(3, 1fr);
   gap: 5px;
+  font-size: 0;
+}
+
+.cards-container .card .card-content .card-buttons button {
+  background: 0;
+  border: 0;
+}
+
+.card-buttons svg {
+  height: 20px;
 }
 
 .card-buttons :first-child {
