@@ -365,7 +365,7 @@ body {
 }
 
 .trending .card {
-  grid-template-rows: repeat(4, max-content);
+  grid-template-rows: repeat(4, 1fr);
   grid-template-columns: 40px 1fr;
   list-style: none;
   gap: 10px;
