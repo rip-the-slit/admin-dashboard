@@ -117,6 +117,7 @@ body {
     --slate-color: #e2e8f0;
     --main-color: #4f46e5;
     --darker-main-color: #3730a3;
+    --shadow: #cbd5e1;
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 150px 1fr;
@@ -149,6 +150,8 @@ body {
     padding: 15px;
     row-gap: 30px;
     font-size: 15px;
+    position: relative;
+    z-index: 11;
 }
 
 .sidebar svg {
@@ -189,6 +192,9 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 2fr;
   gap: 10px;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0px 2px 5px var(--shadow);
 }
 
 .header .search {
@@ -295,7 +301,8 @@ body {
   grid-template-columns: 10px 1fr;
   background: white;
   border-radius: 5px;
-  color:black
+  color:black;
+  box-shadow: 2px 2px 5px var(--shadow);
 }
 
 .cards-container .card .card-decoration {
@@ -338,6 +345,7 @@ body {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   gap: 5px;
+  box-shadow: 2px 2px 5px var(--shadow);
 }
 
 .announcements .card > :nth-last-child(1n + 2) {
