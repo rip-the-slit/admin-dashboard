@@ -214,6 +214,8 @@ body {
   border: 0;
   background: var(--slate-color);
   align-self: center;
+  font-size: 15px;
+  padding: 5px 15px;
 }
 
 .header .profile {
